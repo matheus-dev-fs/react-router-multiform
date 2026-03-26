@@ -5,7 +5,8 @@ export const Container = styled.div`
     border-bottom: 1px solid #16195C;
 
     h1 {
-        font-size: 28px;
+        font-size: 30px;
+        margin: 15px 0;
     }
 
     p {
