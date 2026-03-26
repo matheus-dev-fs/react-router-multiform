@@ -1,6 +1,17 @@
 import styled from 'styled-components'
 
-export const Container = styled.div``;
+export const Container = styled.div`
+    .back-button {
+        font-size: 16px;
+        text-decoration: none;
+        padding: 20px 40px;
+        color: #B8B8D4;
+    }
+
+    .back-button:hover {
+        color: #FFF;
+    }
+`;
 
 export const Step = styled.p`
     font-size: 13px;

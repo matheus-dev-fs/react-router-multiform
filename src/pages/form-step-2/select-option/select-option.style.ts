@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{ $selected: boolean }>`
     display: flex;
-    border: 2px solid #16195C;
+    border: 2px solid ${(props): string => props.$selected ? '#25CD89' : '#16195C'};
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 15px;
@@ -12,6 +12,7 @@ export const Container = styled.div`
     &:hover {
         border-color: #496459;
     }
+
 `;
 
 export const Icon = styled.span`

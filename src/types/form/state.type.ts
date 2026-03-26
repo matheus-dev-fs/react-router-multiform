@@ -1,7 +1,9 @@
+import type { Level } from "./level.type";
+
 export type State = {
     currentStep: number;
     name: string;
-    level: 0 | 1;
+    level: Level;
     email: string;
     github: string;
 }
