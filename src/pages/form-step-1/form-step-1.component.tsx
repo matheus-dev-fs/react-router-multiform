@@ -1,4 +1,4 @@
-import { useEffect, useState, type ChangeEvent, type Dispatch, type FC, type SetStateAction } from 'react';
+import { useEffect, useRef, useState, type ChangeEvent, type Dispatch, type FC, type RefObject, type SetStateAction } from 'react';
 import * as S from './form-step-1.styles';
 import { Theme } from '../../components/theme/theme.component';
 import { useNavigate, type NavigateFunction } from 'react-router-dom';
@@ -13,6 +13,7 @@ export const FormStep1: FC = () => {
         boolean,
         Dispatch<SetStateAction<boolean>>
     ] = useState<boolean>(false);
+    const inputRef: RefObject<HTMLInputElement | null> = useRef<HTMLInputElement>(null);
 
     useEffect((): void => {
         dispatch({ type: FormActions.setCurrentStep, payload: 1 });
@@ -23,6 +24,7 @@ export const FormStep1: FC = () => {
 
         if (IS_NAME_EMPTY) {
             setRequiredNameWarning(true);
+            inputRef.current?.focus();
             return;
         }
 
@@ -55,6 +57,7 @@ export const FormStep1: FC = () => {
                         autoFocus
                         value={state.name}
                         onChange={handleInputChange}
+                        ref={inputRef}
                     />
                 </S.Label>
 
@@ -62,7 +65,7 @@ export const FormStep1: FC = () => {
                     <S.Warning aria-live="polite">O nome é obrigatório
                     </S.Warning>
                 }
-                
+
                 <S.Button onClick={handleNextStep}>Próximo</S.Button>
 
             </S.Container>
