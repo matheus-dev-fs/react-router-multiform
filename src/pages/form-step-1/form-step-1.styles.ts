@@ -38,6 +38,12 @@ export const Input = styled.input`
     background-color: transparent;
 `;
 
+export const Warning = styled.p`
+    font-size: 13px;
+    color: #FF0000;
+    margin-top: 7px;
+`;
+
 export const Button = styled.button`
     background-color: #25CD89;
     color: #FFF;
