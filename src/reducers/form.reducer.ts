@@ -2,7 +2,7 @@ import { FormActions } from "../enums/form-actions.enum";
 import type { Action } from "../types/form/action.type";
 import type { State } from "../types/form/state.type";
 
-export const formReducer = (state: State, action: Action) => {
+export const formReducer = (state: State, action: Action): State => {
     switch (action.type) {
         case FormActions.setCurrentStep:
             return {
