@@ -41,6 +41,14 @@ export const Theme: FC<Props> = ({ children }: Props) => {
                             path="/step-3"
                             selected={state.currentStep === 3}
                         />
+
+                        <SidebarItem 
+                            title="Completo"
+                            description="Tudo certo!"
+                            icon="mail"
+                            path="/step-4"
+                            selected={state.currentStep === 4}
+                        />
                     </S.Sidebar>
                     <S.Page>
                         {children}

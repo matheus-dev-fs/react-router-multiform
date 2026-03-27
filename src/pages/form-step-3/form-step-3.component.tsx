@@ -65,8 +65,7 @@ export const FormStep3: FC = () => {
         }
 
 
-        console.log('Formulário finalizado com sucesso!');
-        console.log(state);
+        navigate('/step-4');
     }
 
     const resetWarningsAndDispatch = (
