@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import profileIcon from '../../../assets/profile.svg';
 import bookIcon from '../../../assets/book.svg';
 import mailIcon from '../../../assets/mail.svg';
+import completedIcon from '../../../assets/completed.svg';
 
 type Props = {
     title: string;
@@ -25,6 +26,7 @@ export const SidebarItem: FC<Props> = ({ title, description, icon, path, selecte
                     {icon === 'profile' && <S.Icon src={profileIcon} alt="Ícone de perfil" />}
                     {icon === 'book' && <S.Icon src={bookIcon} alt="Ícone de livro" />}
                     {icon === 'mail' && <S.Icon src={mailIcon} alt="Ícone de e-mail" />}
+                    {icon === 'completed' && <S.Icon src={completedIcon} alt="Ícone de completo" />}
                 </S.IconArea>
                 <S.Point $selected={selected}></S.Point>
             </Link>
